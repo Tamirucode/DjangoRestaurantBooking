@@ -18,10 +18,10 @@ def add_booking(request):
             form.save()
             return redirect('get_booking_list')
         else:
-            return render(request, 'reservation/add_booking.html',{'form': form} )
+            return render(request, 'restaurant/add_booking.html',{'form': form} )
     form = BookingForm()
     context = {
         'form': form
     }
-    return render(request, 'reservation/add_booking.html', context)
+    return render(request, 'restaurant/add_booking.html', context)
 

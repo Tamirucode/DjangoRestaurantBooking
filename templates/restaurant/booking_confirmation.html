@@ -1,0 +1,50 @@
+{% extends 'nesi/base.html' %}
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row"  style="margin-top: 70px; text-align: center;">
+
+<form action="{% url 'home' %}" method="post">
+
+    {% csrf_token %}
+    <main class="row book-container">
+        <div class = >
+            <h1 class="thin-text booking-subheader mt30">
+            <span class = "fa fa-check">
+                
+            </span>
+            Thanks {{name}}<strong class="black-text"> -your booking is now confirmed </strong>
+
+            </h1>
+        </div>
+        <div class="font-large">
+            <p>{{booking.name}}</p>
+            <p>{{booking.phone_number}}</p>
+            <p>{{booking.Number_of_persons}} persons</p>
+            <p>{{booking.booking_date_and_time}}</p>
+        </div>
+    <div class="row font-link font-medium">
+        <div class="col-xs-12 col-12 mb10">
+            <a href="{% url 'home'%}">Go back home page</a>
+        </div>
+
+    </div>
+   
+    
+
+    </main>
+    
+</form>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
