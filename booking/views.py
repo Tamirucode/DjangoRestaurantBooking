@@ -2,11 +2,18 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 
+
 def home(request):
     return render(request, 'restaurant/home.html')
   
+
 def about(request):
     return render(request, 'restaurant/about.html')
+
+
+def menu(request):
+    return render(request, 'restaurant/menu.html')
+
 
 def get_booking_list(request):
     bookings = Booking.objects.all()
@@ -14,6 +21,7 @@ def get_booking_list(request):
         'bookings':bookings
     }
     return render(request, 'restaurant/booking_list.html', context)
+
 
 def add_booking(request):
     if request.method == 'POST':
@@ -29,6 +37,7 @@ def add_booking(request):
     }
     return render(request, 'restaurant/add_booking.html', context)
 
+
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
@@ -43,6 +52,7 @@ def edit_booking(request, booking_id):
         'form': form
     }
     return render(request, 'restaurant/edit_booking.html', context)
+
 
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
