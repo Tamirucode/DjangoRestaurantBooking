@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm
 
+def home(request):
+    return render(request, 'restaurant/home.html')
+  
 
 def get_booking_list(request):
     bookings = Booking.objects.all()
@@ -16,7 +19,8 @@ def add_booking(request):
         form = BookingForm(request.POST or None)
         if form.is_valid():
             form.save()
-            return redirect('get_booking_list')
+            ##return redirect('get_booking_list')
+            return render(request, 'restaurant/booking_confirmation.html', locals())
         else:
             return render(request, 'restaurant/add_booking.html',{'form': form} )
     form = BookingForm()

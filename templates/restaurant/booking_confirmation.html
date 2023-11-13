@@ -15,15 +15,15 @@
             <span class = "fa fa-check">
                 
             </span>
-            Thanks {{name}}<strong class="black-text"> -your booking is now confirmed </strong>
+            Thanks {{user}}<strong class="black-text"> -your booking is now confirmed </strong>
 
             </h1>
         </div>
         <div class="font-large">
-            <p>{{booking.name}}</p>
-            <p>{{booking.phone_number}}</p>
-            <p>{{booking.Number_of_persons}} persons</p>
-            <p>{{booking.booking_date_and_time}}</p>
+            <p>Name: {{booking.name}}</p>
+            <p>Phone Number: {{booking.phone_number}}</p>
+            <p>Number of Persons: {{booking.Number_of_persons}} persons</p>
+            <p>Booking Date and Time: {{booking.booking_date_and_time}}</p>
         </div>
     <div class="row font-link font-medium">
         <div class="col-xs-12 col-12 mb10">
@@ -32,7 +32,11 @@
 
     </div>
    
-    
+</div>
+<div class="row font-link font-medium">
+    <div class="col-xs-12 col-12 mb10">
+        <a href="{% url 'mybooking'%}" >Cancel a booking</a>
+    </div>
 
     </main>
     
