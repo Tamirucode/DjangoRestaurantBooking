@@ -15,6 +15,12 @@ def menu(request):
     return render(request, 'restaurant/menu.html')
 
 
+def contact(request):
+    if request.method == 'POST':
+        print('Hello! is anybody there?')
+    return render(request, 'restaurant/contact.html')
+
+
 def get_booking_list(request):
     bookings = Booking.objects.all()
     context = {
