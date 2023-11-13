@@ -11,10 +11,22 @@ body{
     background-color: #2d9b87;
 }
 
-thead{
-    background-color: greenyellow;
-}
 
+tr{
+    
+    color: black;
+}
+tr a{
+    color: black;
+}
+tr a:hover{
+    color:red;
+}
+thead{
+    background-color: brown;
+    color:#fff;
+    
+}
 
 .navbar-nav a:hover {
     color: chocolate;

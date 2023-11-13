@@ -1,0 +1,46 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row"  style="margin-top: 70px; text-align: center;">
+
+        <h1>Add new booking:</h1>
+        <form method="POST" action="add">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <div>
+                <p>
+                    <button type="submit">Update Booking</button>
+                    
+                </p>
+                <p>{{error}}</p>
+            </div>
+            
+        </form>
+    
+
+
+    
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
