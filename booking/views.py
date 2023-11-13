@@ -5,10 +5,11 @@ from .forms import BookingForm
 def home(request):
     return render(request, 'restaurant/home.html')
   
+def about(request):
+    return render(request, 'restaurant/about.html')
 
 def get_booking_list(request):
     bookings = Booking.objects.all()
-
     context = {
         'bookings':bookings
     }
