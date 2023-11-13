@@ -6,8 +6,8 @@
 <div class="container">
     <div class="row"  style="margin-top: 70px; text-align: center;">
 
-        <h1>Add new booking:</h1>
-        <form method="POST" action="add">
+        <h1>Edit booking:</h1>
+        <form method="POST" >
             {% csrf_token %}
             {{ form.as_p }}
             
