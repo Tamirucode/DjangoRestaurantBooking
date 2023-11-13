@@ -10,9 +10,17 @@
 body{
     background-color: #2d9b87;
 }
-
+ h2{
+    margin-bottom: 20px;
+    margin-left: 20px;
+ }
 
 tr{
+    
+    color: black;
+    width: 100%;
+}
+a{
     
     color: black;
 }
@@ -23,9 +31,9 @@ tr a:hover{
     color:red;
 }
 thead{
-    background-color: brown;
-    color:#fff;
+    background-color: lightblue;
     
+   
 }
 
 .navbar-nav a:hover {
@@ -173,5 +181,5 @@ footer {
     font-size: 160%;
     margin: 1%;
     padding: 5% ;
-    color:#fff
+    color:black
 }

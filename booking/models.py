@@ -27,8 +27,8 @@ class Booking(models.Model):
             raise ValidationError("Date and Time cannot be in the past")
         
     booking_date_and_time = models.DateTimeField(
-                                null=True,
-                                blank=True,
+                                null=False,
+                                blank=False,
                                 validators=[validate_date] 
                                )
         

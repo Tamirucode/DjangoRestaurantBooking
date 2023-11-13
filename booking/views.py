@@ -19,7 +19,6 @@ def add_booking(request):
         form = BookingForm(request.POST or None)
         if form.is_valid():
             form.save()
-            ##return redirect('get_booking_list')
             return render(request, 'restaurant/booking_confirmation.html', locals())
         else:
             return render(request, 'restaurant/add_booking.html',{'form': form} )
@@ -44,7 +43,7 @@ def edit_booking(request, booking_id):
     }
     return render(request, 'restaurant/edit_booking.html', context)
 
-    def delete_booking(request, booking_id):
+def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
     return redirect('mybooking')

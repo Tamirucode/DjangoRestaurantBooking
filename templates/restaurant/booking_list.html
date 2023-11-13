@@ -4,39 +4,35 @@
 <h3>BOOKING LIST</h3>
 <div class="table-responsive">
     <table class="table">
-    <thead >
-        <td>NAME</td>
-        <td>PHONE NUMBER </td>
-        <td>NUMBER _OF_PERSONS</td>
-        <td>BOOKING DATE AND TIME</td>
-       
-    </thead>
+        <thead>
+            <td>NAME</td>
+            <td>PHONE NUMBER </td>
+            <td>NUMBER _OF_PERSONS</td>
+            <td>BOOKING DATE AND TIME</td>
+        </thead>
 
     {% for booking in bookings %}
-    <tr>
-        <td>{{booking.name}}</td>
-        <td>{{booking.phone_number}}</td>
-        <td>{{booking.Number_of_persons}} persons</td>
-        <td>{{booking.booking_date_and_time}}</td>
-        <td><a href="/edit/{{booking.id }}">
+        <tr>
+            <td>{{booking.name}}</td>
+            <td>{{booking.phone_number}}</td>
+            <td>{{booking.Number_of_persons}} persons</td>
+            <td>{{booking.booking_date_and_time}}</td>
+            <td><a href="/edit/{{booking.id }}">
             Edit
             </a>
-        </td>
-        <td><a href="/delete/{{booking.id }}">
+            </td>
+            <td><a href="/delete/{{booking.id }}">
             Delete
             </a>
-        </td>
-    </tr>
+            </td>
+        </tr>
        
-        
-    {% empty %}
-   <tr><td> <h2>You have no upcoming booking</h2></td></tr>
+        {% empty %}
+        <tr><td> <h2>You have no upcoming booking</h2></td></tr>
 
     {% endfor %}
-</table>
-    <a href="/add">Add booking</a>
+    </table>
+        <a href="/add">Add Booking</a>
 </div>
-
-    
 
 {% endblock %}
