@@ -1,24 +1,26 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
+from django.contrib import messages
 
 
 def home(request):
-    return render(request, 'restaurant/home.html')
+    return render(request, 'booking/home.html')
   
 
 def about(request):
-    return render(request, 'restaurant/about.html')
+    return render(request, 'booking/about.html')
 
 
 def menu(request):
-    return render(request, 'restaurant/menu.html')
+    return render(request, 'booking/menu.html')
 
 
 def contact(request):
-    if request.method == 'POST':
-        print('Hello! is anybody there?')
-    return render(request, 'restaurant/contact.html')
+    
+    if request.method == "POST":
+        messages.success(request, "Thanks, we have received your message!")
+    return render(request, 'booking/contact.html')
 
 
 def get_booking_list(request):
@@ -26,7 +28,7 @@ def get_booking_list(request):
     context = {
         'bookings':bookings
     }
-    return render(request, 'restaurant/booking_list.html', context)
+    return render(request, 'booking/booking_list.html', context)
 
 
 def add_booking(request):
@@ -34,14 +36,14 @@ def add_booking(request):
         form = BookingForm(request.POST or None)
         if form.is_valid():
             form.save()
-            return render(request, 'restaurant/booking_confirmation.html', locals())
+            return render(request, 'booking/booking_confirmation.html', locals())
         else:
-            return render(request, 'restaurant/add_booking.html',{'form': form} )
+            return render(request, 'booking/add_booking.html',{'form': form} )
     form = BookingForm()
     context = {
         'form': form
     }
-    return render(request, 'restaurant/add_booking.html', context)
+    return render(request, 'booking/add_booking.html', context)
 
 
 def edit_booking(request, booking_id):
@@ -50,14 +52,14 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return render(request, 'restaurant/booking_confirmation.html', locals())
+            return render(request, 'booking/booking_confirmation.html', locals())
         else:
-            return render(request, 'restaurant/edit_booking.html',{'form': form} )
+            return render(request, 'booking/edit_booking.html',{'form': form} )
     form = BookingForm(instance=booking)
     context = {
         'form': form
     }
-    return render(request, 'restaurant/edit_booking.html', context)
+    return render(request, 'booking/edit_booking.html', context)
 
 
 def delete_booking(request, booking_id):
