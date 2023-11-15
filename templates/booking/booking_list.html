@@ -18,11 +18,13 @@
             <td>{{booking.Number_of_persons}} persons</td>
             <td>{{booking.booking_date_and_time}}</td>
             <td><a href="/edit/{{booking.id }}">
-            Edit
+            <button class="btn btn-primary" type="submit">Edit</button>
             </a>
             </td>
-            <td><a id="myBtn"    href="/delete/{{booking.id }}" >
-            Delete
+            <td><a  href="/delete/{{booking.id }}" >
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                Delete
+              </button>
             </a>
             </td>
         </tr>
