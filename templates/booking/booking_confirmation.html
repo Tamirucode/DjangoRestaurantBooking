@@ -4,20 +4,16 @@
 <div class="container">
     <div class="row"  style="margin-top: 70px; text-align: center;">
 
-        <form action="{% url 'home' %}" method="post">
-
-        {% csrf_token %}
+        
             <main class="row book-container">
-                <div class = >
+                <div >
                     <h1 class="thin-text booking-subheader mt30">
                     <span class = "fa fa-check">
-                
                     </span>
-                    Thanks {{user}}<strong class="black-text"> -your booking is now confirmed </strong>
-
-                    </h1>
+                    Thanks {{user}}<strong class="black-text"> -your booking is now confirmed </strong></h1>
                 </div>
-                <div class="font-large" >
+                <div >
+                    
                     <p>Name: {{booking.name}}</p>
                     <p>Phone Number: {{booking.phone_number}}</p>
                     <p>Number of Persons: {{booking.Number_of_persons}} persons</p>
@@ -25,15 +21,20 @@
                 </div>
                 <div class="row font-link font-medium">
                 <div class="col-xs-12 col-12 mb10">
-                <a href="{% url 'home'%}" style ="color: black;">Go back home page</a>
+                <a href="{% url 'home'%}" >
+                <button  style="margin-bottom: 10px;" class="btn btn-primary" type="submit">Go back home page</button>   
+                </a>
                 </div>
                 </div>
                 <div class="row font-link font-medium">
                 <div class="col-xs-12 col-12 mb10">
-                <a href="{% url 'mybooking'%}" style ="color: black;">Cancel a booking</a>
+                <a href="{% url 'mybooking' %}">
+                <button class="btn btn-info" type="submit">Cancel a booking</button>   
+                </a>
+                </div>
                 </div>
             </main>
-        </form>
+       
     </div>
 </div>
 {% endblock %}

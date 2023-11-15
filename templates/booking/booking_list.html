@@ -2,7 +2,7 @@
 {% block content %}
  
 <h3>BOOKING LIST</h3>
-<div class="table-responsive">
+<div class="table-responsive-sm">
     <table class="table">
         <thead>
             <td>NAME</td>
@@ -22,9 +22,7 @@
             </a>
             </td>
             <td><a  href="/delete/{{booking.id }}" >
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                Delete
-              </button>
+            <button  onclick="checker()" type="button" class="btn btn-danger" >Delete</button>
             </a>
             </td>
         </tr>
@@ -34,7 +32,8 @@
 
     {% endfor %}
     </table>
-        <a href="/add">Add Booking</a>
+       
 </div>
+
 
 {% endblock %}

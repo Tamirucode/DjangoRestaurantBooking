@@ -10,30 +10,10 @@
 body{
     background-color: #2d9b87;
 }
- h2{
-    margin-bottom: 20px;
-    margin-left: 20px;
- }
 
-tr{
-    
-    color: black;
-    width: 100%;
-}
-a{
-    
-    color: black;
-}
-tr a{
-    color: black;
-}
-tr a:hover{
-    color:red;
-}
+
 thead{
     background-color: lightblue;
-    
-   
 }
 
 .navbar-nav a:hover {
@@ -51,44 +31,11 @@ thead{
     width:100%;
 }
 
-#table{
-    flex:0.5;
-    margin: 2rem;
-    display:flex;
-    text-align: left;
-    align-items: start;  
-    flex-direction: column;
-}
-
-
-.table-info{
-    flex: 0.4;
-    margin: 1rem 1rem;
-    
-}
-
 img {
     max-width: 100%;
     background-color: #fff;
-  }
+}
   
-
-.table-info{
-    flex: 0.4;
-    margin: 1rem 1rem;
-    
-}
-
-.input-div{
-    flex: 1 1 auto;
-    margin:1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:300px;
-    line-height: 1.5rem;
-}
-
 button{
     background-color: #dfdfdf;
     color:rgb(6, 137, 245);
@@ -103,9 +50,13 @@ button:hover{
 
 /*css  login and logout button*/
 
+.btn-signin{
+    color:#7ed321;
+}
+
 .btn-signup {
     background-color: #4423bb;
-    color: #fff;
+    color:#7ed321;
 }
   
 .btn-signup:hover

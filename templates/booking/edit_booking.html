@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row"  style="margin-top: 70px; text-align: left;">
 
-        <h2>EdIT BOOKING:</h2>
+        <h3>Edit Booking</h3>
         <form method="POST" >
             {% csrf_token %}
             {{ form.as_p }}
@@ -15,6 +15,7 @@
                 </p>
             </div>
         </form>
+    </div>
 </div>
 
 {% endblock %}

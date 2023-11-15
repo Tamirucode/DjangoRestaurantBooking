@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 from django.contrib import messages
-
+from django.contrib.auth.models import User
 
 def home(request):
     return render(request, 'booking/home.html')
@@ -24,7 +24,9 @@ def contact(request):
 
 
 def get_booking_list(request):
-    bookings = Booking.objects.all()
+    
+    
+    bookings = Booking.objects.filter(user =request.user)
     context = {
         'bookings':bookings
     }
@@ -35,7 +37,9 @@ def add_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST or None)
         if form.is_valid():
-            form.save()
+            booking = form.save()
+            booking.user = request.user
+            booking.save()
             return render(request, 'booking/booking_confirmation.html', locals())
         else:
             return render(request, 'booking/add_booking.html',{'form': form} )
@@ -51,7 +55,9 @@ def edit_booking(request, booking_id):
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
-            form.save()
+            booking = form.save()
+            booking.user = request.user
+            booking.save()
             return render(request, 'booking/booking_confirmation.html', locals())
         else:
             return render(request, 'booking/edit_booking.html',{'form': form} )
