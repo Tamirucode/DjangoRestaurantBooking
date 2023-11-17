@@ -1,14 +1,17 @@
 {% extends 'booking/base.html' %}
 {% block content %}
- 
+
 <h3>BOOKING LIST</h3>
 <div class="table-responsive-sm">
-    <table class="table">
+
+    <table class="table" >
         <thead>
             <td>NAME</td>
             <td>PHONE NUMBER </td>
-            <td>NUMBER _OF_PERSONS</td>
+            <td>NUMBER_OF_PERSONS</td>
             <td>BOOKING DATE AND TIME</td>
+            <td>EDIT</td>
+            <td>DELETE</td>
         </thead>
 
     {% for booking in bookings %}
@@ -32,8 +35,8 @@
 
     {% endfor %}
     </table>
-       
+    
+
 </div>
-
-
+ 
 {% endblock %}

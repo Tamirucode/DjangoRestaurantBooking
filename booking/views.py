@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 from django.contrib import messages
-from django.contrib.auth.models import User
+
 
 def home(request):
     return render(request, 'booking/home.html')
@@ -25,12 +25,14 @@ def contact(request):
 
 def get_booking_list(request):
     
-    
-    bookings = Booking.objects.filter(user =request.user)
-    context = {
-        'bookings':bookings
-    }
-    return render(request, 'booking/booking_list.html', context)
+    context = {}
+    user = request.user
+    bookings= Booking.objects.filter(name=user)
+    if bookings:
+        return render(request, 'booking/booking_list.html', locals())
+    else:
+        messages.error(request, "Sorry you have no booked table!", context)
+        return render(request, 'booking/booking_list.html', context)
 
 
 def add_booking(request):

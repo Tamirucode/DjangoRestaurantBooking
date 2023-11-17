@@ -3,15 +3,24 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.utils import timezone
 from phonenumber_field.modelfields import PhoneNumberField
-
+from django.contrib.auth.models import User
 
 class Booking(models.Model):
     """
     Class to represent booking model
     in database and for booking form.
-    """
     
-    name = models.CharField(max_length=20, null=True)
+    """
+    def validate_name(name):
+        """
+        Function to validate name so that
+        name must be equale logged in user 
+        """
+        if not name == name:
+            raise ValidationError("provide valid user name")
+        
+    
+    name = models.CharField(max_length=20, null=False, validators=[validate_name])
     
     Number_of_persons = models.PositiveIntegerField(
                             null=True,

@@ -134,3 +134,17 @@ footer {
     padding: 5% ;
     color:black
 }
+
+@media only screen and (max-width:430px){
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:100%;
+
+    
+    }
+    
+
+    }

@@ -12,7 +12,7 @@ class BookingForm(forms.ModelForm):
         Add form inputs from the model items as form fields.
         """
         model = Booking
-        fields = ('name', 'phone_number', 'Number_of_persons', 'booking_date_and_time')
+        fields = ['name', 'phone_number', 'Number_of_persons', 'booking_date_and_time']
         widgets = {
             'booking_date_and_time': widgets.DateTimeInput(attrs={'type': 'datetime-local'})
         }
