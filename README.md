@@ -190,6 +190,10 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
   ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/afc82ede-582f-4030-ad46-49f7fddd8fbc)
 
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/f23b2e4f-7503-49c1-83b1-546a9f63173b)
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/77c8b599-7077-4b52-a26e-00c499a81f07)
+
 
  - Below i have checked user Degu book a table
 
@@ -230,5 +234,25 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
  - PEP8			
 	  - No errors were returned from PEP8online.com
 
+## Further Testing
+  
+  - The Website was tested on Google Chrome, Firefox, Microsoft Edge, safari and Internet Explorer browsers. The site renders fine in all browsers. 
+ 
+  - The website was viewed on a variety of devices such as Desktop, Laptop, Samsung Galaxy A51 by using Google Developer Tools.
 
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/ee4390cd-800e-4b5b-a689-196b9eb68d47)
+
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/295ac63f-a430-4429-bb0a-ec3affad7219)
+
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/5f0ff9b0-2a11-4807-8f29-3e5129887e81)
+
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/e3220023-1506-4a82-8d3b-185ec0ed5f26)
+
+
+
+
+  
+  - It is responsive on all devices and all features work as expected.
+  
+  - A large amount of testing was done to ensure that a user can add, update and delete booking. 
 
