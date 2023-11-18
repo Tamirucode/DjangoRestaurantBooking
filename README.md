@@ -67,7 +67,23 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
      
      - For view booking a table, the user will be able to view the booking list.
 
+##  How  the user make bookings
  
+ - First of all they need to register the site
+ 
+ - Second click the link Book a tale  nav element
+ 
+ - Third fill out th form and then click make booking button
+ 
+ - Finally,  they received confirmation
+       
+
+
+## Future Features
+			
+  - when there is time, I would like to add more functionality for example the user make booking 
+     with small amount money depositions but the money is back  when the user come and enjoy in the restaurant.
+			 
 
   
 
