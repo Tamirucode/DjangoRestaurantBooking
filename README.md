@@ -167,3 +167,53 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/174f0ecf-fe4a-494d-a28b-8dd2e7f06518)
+
+
+## Testing
+   
+   - I have mannually test this project by doing the following:-
+
+     - below generate tested values screen shot  from my local and code institute Heroku terminal
+      presented:-
+
+       - by supplied 3 different user:- to check whether the user try to book or not
+       
+       - by checking each  user view their own booking or not
+
+       - by checking form validation works properly or not
+
+       - by checking if  once user book a table, it is expected seen in the admin site
+
+ - Below i have checked form validation work as expected
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/fced3509-ed90-4ebc-8464-d6712dd5e67d)
+
+ - Below i have checked user Degu book a table
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/4fecde62-8da5-44d6-92d1-b6d44788e39e)
+
+ - Below i have checked user Degu edit booking
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/9441dbb9-111a-4fe2-b042-94d277fc16f8)
+
+ - Below i have checked user Degu delete booking , popup there are two options if he click 'ok' delete or click 'cancel' booking remain
+  
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/f6f48a1a-1453-424f-9100-34110c4f78ad)
+
+ - Below i have checked user Degu  after delete booking
+ 
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/d61bd2ca-40a0-4f10-ab18-ea070784a806)
+
+- Below i have checked user Tamiru book a table
+ 
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/d10384d0-6f3f-4437-b6db-13f351c2c047)
+
+- Below i have checked user Nesi book a table
+
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/401e3cf6-73f0-4402-86f5-60d4dd3a3957)
+
+- Below i have checked all the above three users expected seen in admin site
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/888791b8-cc26-4547-994b-4b4912a6e7cf)
+
+
