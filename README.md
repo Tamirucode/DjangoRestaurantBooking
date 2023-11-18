@@ -188,6 +188,9 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
   ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/fced3509-ed90-4ebc-8464-d6712dd5e67d)
 
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/afc82ede-582f-4030-ad46-49f7fddd8fbc)
+
+
  - Below i have checked user Degu book a table
 
   ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/4fecde62-8da5-44d6-92d1-b6d44788e39e)
@@ -215,5 +218,17 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 - Below i have checked all the above three users expected seen in admin site
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/888791b8-cc26-4547-994b-4b4912a6e7cf)
+
+
+## Validator Testing
+
+  - The W3C Markup Validator and W3C CSS Validator Services were used to validate every page for HTML and CSS of the project 
+    to ensure there were no syntax errors in the project.
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/b0b41f7f-468f-4923-baff-163f58fd2197)
+
+ - PEP8			
+	  - No errors were returned from PEP8online.com
+
 
 
