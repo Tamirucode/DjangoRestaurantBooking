@@ -78,12 +78,23 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
  - Finally,  they received confirmation
        
 
-
 ## Future Features
 			
   - when there is time, I would like to add more functionality for example the user make booking 
      with small amount money depositions but the money is back  when the user come and enjoy in the restaurant.
 			 
+## DATA MODEL
 
-  
+- In this project I implemented function based views as Python objects.
+
+- The logic patterns to create, read, update and delete model instances in a 
+   standard view method.
+
+- I consider a project name restaurant having an app name booking.
+
+- After i have a project and an app, i create a model of which we will  creating instances 
+  through our views. In booking/models.py the table presented below
+
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/2b495698-3dad-4aa0-8d80-fa6b6364aefb)
 
