@@ -98,3 +98,72 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/2b495698-3dad-4aa0-8d80-fa6b6364aefb)
 
+
+## Testing User Stories from User Experience (UX)
+
+- From new user point of view 
+
+    - Firstly, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice.
+            Underneath there is a Hero Image with Text 
+
+    - Secondly, the user can easily navigate throughout the site to find content. It has been designed with limited content
+      so that the user can't enterapped.
+    
+    - Thirdly, the user has completed looking at Home, Menu, and contact us pages, they might decide to look register and login pages
+      and then book a table.
+    
+    - Fifth, once the account has created and been directed to home page, they can click on the Book A table nav-link.
+
+      This time they see bar section image of the restaurant with lovely wine glass seated attractive way and  Book a Table form
+
+      with the following element.
+   	
+      - name - username as per what user is logged in as
+        
+	   - phome number - user phone number 
+        
+	   - number of persons - number of guest share  available table
+        
+	   - booking date and time
+
+        Once user has completed and then  clicks on Making a booking  button, they are redirected to  a new  page. At the same time green tickmark
+
+        including username  message appears on top the middle of the page: "your booking has confirmed now"
+
+  	As we have seen the image below 
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/e7647213-a250-4529-bc4e-7ca71c3b20b5)
+
+
+    - sixth, if user decide that they wish update or delete their booking, they must click on mybookings nav-link. The editing and deleting booking
+
+      page will appear on the same page, the edit form like booking form.  As we have seen the image below 
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/59efd818-362e-43d9-98a1-186fa7f80e2e)
+
+ 
+ - Once user clicks on Delete  booking  button, user sees the following popup message "Are you sure  you want delete this booking?"
+         
+   if the user clicks on the "cancel booking" button, they are stay the same  page and booking would remain but 
+  
+   user clicks on the "ok booking" button that particular booking details deleted permanently. As the image below
+
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/59ce7afc-5bc8-4ee5-a18c-8a6512308980)
+
+
+  - Finally, the user need sign out at the end of the session so that keep their account safe and secure.
+
+- From  Admin point of view 
+    
+     - Firstly,  register  admin site and then login into the admin page
+     
+     - Secondly, able to create, view, edit and delete bookings.
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/97e875fd-96e6-4e35-9631-69b6b42865aa)
+
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/bf85f482-586e-474f-878f-a6410056f26f)
+
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/174f0ecf-fe4a-494d-a28b-8dd2e7f06518)
