@@ -15,11 +15,13 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
   
   - Admin panel features
      - User
-          - For the user, The admin can add, update, and delete user information
+         
+	  - For the user, The admin can add, update, and delete user information
              and also the admin can change the password  of the user
           
      - Manage Booking    
-          - For  the booking, The admin can add, update, and delete booking information.
+          
+	  - For  the booking, The admin can add, update, and delete booking information.
             
 	 - Manage Table
          
@@ -96,7 +98,12 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
   through our views. In booking/models.py the table presented below
 
 
-![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/2b495698-3dad-4aa0-8d80-fa6b6364aefb)
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/854ca722-e608-4ace-8c64-b17406c7f9ff)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/d9a2eb3e-1fc0-431b-bdad-61519c342827)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/33be3578-a521-4a97-bc73-330eb50725fc)
+
 
 
 ## Testing User Stories from User Experience (UX)
@@ -264,3 +271,21 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
   ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/20a4c732-cedb-450a-ade2-c1109f39e0c0)
    
 
+## Bugs
+  -  Remaining bugs
+      
+     - I am running my code through HTML checker validation and it is coming back with a few errors which i don't know
+     
+        how to fix as the code has been django's template engine
+
+##  Form validation
+
+   - validation I could implement
+      
+      - make booking form
+        
+   - validation I couldn't implement
+
+      - I intended to implement for name field just check if and only if booking allowed logged in user name, i tried as much as i couldn't
+      
+         due time shortage, I'm not pursuing a further solution at the moment. In the future I would like to add this issue.
