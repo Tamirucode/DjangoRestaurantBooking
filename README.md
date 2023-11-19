@@ -219,7 +219,7 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/401e3cf6-73f0-4402-86f5-60d4dd3a3957)
 
-- Below i have checked all the above three users expected seen in admin site
+- Below i have checked all the above three users booking expected seen in admin site
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/888791b8-cc26-4547-994b-4b4912a6e7cf)
 
@@ -248,11 +248,19 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/e3220023-1506-4a82-8d3b-185ec0ed5f26)
 
+ ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/1bdf4cd8-70a2-4213-9350-2a65020ad332)
 
 
-
-  
   - It is responsive on all devices and all features work as expected.
   
-  - A large amount of testing was done to ensure that a user can add, update and delete booking. 
+  - A large amount of testing was done to ensure that a user can add, update and delete booking.
+
+
+## Automated Testing
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/73e8ff47-ed1e-45ba-9c09-3017c2bd60d6)
+
+
+  ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/20a4c732-cedb-450a-ade2-c1109f39e0c0)
+   
 
