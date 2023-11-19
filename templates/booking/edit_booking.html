@@ -1,9 +1,12 @@
 {% extends 'booking/base.html' %}
 {% block content %}
 
-<div class="container">
-    <div class="row"  style="margin-top: 70px; text-align: left;">
-
+<div class="content">
+    <!-- Table Image -->
+        <div class="image">
+        <img src="https://res.cloudinary.com/dqh6bfpwq/image/upload/v1688938872/gallery-3_zjmtlt.jpg" alt="Restaurant interior bar section" >
+        </div>
+    <div class="column"  style="margin-top: 75px; margin-left: 5%;">
         <h3>Edit Booking</h3>
         <form method="POST" >
             {% csrf_token %}

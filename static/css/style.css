@@ -31,6 +31,7 @@ thead{
     width:100%;
 }
 
+
 img {
     max-width: 100%;
     background-color: #fff;
@@ -50,7 +51,25 @@ button:hover{
 
 /*css  login and logout button*/
 
-.btn-signin{
+a.link{
+    
+    text-decoration: none;
+}
+
+a.link:hover{
+    color:orange;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#bb2390;
+}
+
+.btn-signin {
     color:#7ed321;
 }
 
@@ -65,33 +84,11 @@ button:hover{
     color: #bb2390;
 }
   
-.link {
-    color: #d9c8c8;
-    text-decoration: none;
-}
   
-.link:hover
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-  
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-  
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
 .fa-check{
     color: #7ed321;
 }
+
 .font-link,
 .font-link a {
     color:#295c75;
@@ -137,14 +134,10 @@ footer {
 
 @media only screen and (max-width:430px){
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .column {
         width:100%;
+       
+}
+}
 
     
-    }
-    
-
-    }

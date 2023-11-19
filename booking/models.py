@@ -3,7 +3,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 from django.utils import timezone
 from phonenumber_field.modelfields import PhoneNumberField
-from django.contrib.auth.models import User
+
+
 
 class Booking(models.Model):
     """
@@ -11,16 +12,8 @@ class Booking(models.Model):
     in database and for booking form.
     
     """
-    def validate_name(name):
-        """
-        Function to validate name so that
-        name must be equale logged in user 
-        """
-        if not name == name:
-            raise ValidationError("provide valid user name")
-        
     
-    name = models.CharField(max_length=20, null=False, validators=[validate_name])
+    name = models.CharField(max_length=20, null=False)
     
     Number_of_persons = models.PositiveIntegerField(
                             null=True,
@@ -30,7 +23,7 @@ class Booking(models.Model):
     def validate_date(booking_date_and_time):
         """
         Function to validate date so that
-        booking date is in the future.
+        booking date and time should be in the future.
         """
         if booking_date_and_time < timezone.now():
             raise ValidationError("Date and Time cannot be in the past")
@@ -50,10 +43,11 @@ class Booking(models.Model):
         
         unique_together = [ 'name', 'phone_number']
         
+    
     def __str__(self):
         """
         Function to return object model
-        boookings as string.
+        bookings as string.
         """
         return f' User {self.name} has made a booking \
                 for {self.Number_of_persons} persons\
