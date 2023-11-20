@@ -289,3 +289,87 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
       - I intended to implement for name field just check if and only if booking allowed logged in user name, i tried as much as i couldn't
       
          due time shortage, I'm not pursuing a further solution at the moment. In the future I would like to add this issue.
+
+## Testing after deployment by creating user helen
+    
+ -Add booking
+	
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/f3918138-6f94-442e-b795-b6e055dec7bc)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/055f625a-d6c2-4bf6-af8d-83ed25288807)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/6e0f3eea-1ea0-4e58-833c-3f919af46a7a)
+
+ - Edit booking
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/f71441b4-bd7d-447b-8677-ef694a894806)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/79c045a4-7956-4b29-b975-75e6adc07fe5)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/0545adf9-9522-46b3-a73d-bee77875f45b)
+
+- Delet booking
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/f35f641a-aaf9-4ddc-af3d-77d19d0a19ad)
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/73007a89-b413-42fc-abd4-e2d3380b4b5a)
+
+- check Contact section can respond messages to user or not
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/b2a94338-7aa8-421c-a763-8560891b4d08)
+
+
+## Deployment
+
+- The site was deployed to GitHub pages and Heroku terminal.
+   
+   - steps for deployment   
+	
+ 	1. Postgres database  was created in Elephant SQL using  my project name:- django_booking
+	
+ 	2. A Heroku app was created in Heroku.  Mine is called restaurantbooking2023
+	
+	3. In the Heroku settings tab I clicked on "Reveal Config Vars" and copied, and pasted Postgres link from beside the DATABASE_URL variable
+
+	4. In Gitpod dev environment, I have noticed for the env.py file that was automatically generated from the CI template at the beginning. It stores environment variables.
+
+	5. In the terminal, install dj_database_url and psycopg2
+
+ 	6. In my IDE workspace, install gunicorn
+
+	7. In the settings.py file, import dJ_database_url underneath import for os
+
+	8. I  removed the value for SECRET_KEY  in setting .py file and replace with the following code to use an environment variable instead
+		
+  		SECRET_KEY = os.getenv('SECRET_KEY')
+	
+ 	9. I added a secret key in the env.py file and  into the Heroku Settings vars as well.
+	
+ 	10. I also added DISABLE_COLLECTSTATIC = 1  into the Heroku Settings vars
+	
+ 	11. I added cloudinary url in the env.py file and into the Heroku Settings vars as well
+
+	12. I created a Procfile 
+
+ 	13. In my env.py file, added a new environment variable  with the key set to Database_url, and the value to my elphantSQL database_url
+
+	14. I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in setting.py followed by a comma and 'localhost' ( to allow running in the IDE)
+
+	15. initial deployment stage disable collectstatic value and 1 key  assign
+	
+ 	16. At final stage only disable collectstatic with its value removed
+
+	17. At last Debug=False
+
+	18. After  that go Heroku dashboard page  then click deploymnet tab
+
+	19. just click Github then connect and confirm connect Github
+
+	20. scroll down the page click deploy branch and the app being built
+
+	21. Finally, we see deployement the app successful message and
+
+	22. click the view button to take a look
+
+- The live link can be found here:- [nesidjango](https://nesidjango2023-c15b4637e066.herokuapp.com/)
+
