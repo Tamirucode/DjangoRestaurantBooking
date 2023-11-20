@@ -241,7 +241,7 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
  - PEP8			
 	  - No errors were returned from PEP8online.com
   
-## Lighthous Testing
+## Lighthouse Testing
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/1bf4caac-1ac1-4d14-a7a5-e3c3bb6dc295)
 
@@ -279,15 +279,15 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
  
   -  Remaining bugs
 
-    -  I am attempting to create a booking website where booking has been made for the currently logged in user name otherwise not
+       - I am attempting to create a booking website where booking has been made for the currently logged in user name otherwise not
      
-       When I tested, I found that logged in user can do booking by changing name but he/she couldnot not seen it their respective mybooking page 
+          When I tested, I found that logged in user can do booking by changing name but he/she couldnot not seen it their respective mybooking page 
 
-       only I see it in admin site
+           only I see it in admin site
       
-     - I am running my code through HTML checker validation and it is coming back with a few errors which i don't know
+      - I am running my code through HTML checker validation and it is coming back with a few errors which i don't know
      
-        how to fix as the code has been django's template engine
+           how to fix as the code has been django's template engine
 
 ##  Form validation
 
@@ -353,7 +353,7 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
     
     - Step 2: Create a new external database
 
-	- Postgres database  was created in Elephant SQL using  my project name:- django_booking
+	  - Postgres database  was created in Elephant SQL using  my project name:- django_booking
 
     - Step 3: Create the Heroku app
 
@@ -361,7 +361,7 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
      
     - Step 4: Attach the Database:
 
-	 - In env.py
+	   - In env.py
 	
  		Import os library
 
@@ -369,82 +369,81 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
 	        Add in secret key
    	
-    	- In heroku.com
+    	 - In heroku.com
 
 		Add Secret Key to Config Vars :- SECRET_KEY, “randomSecretKey”
 
-       - Step 5: Prepare our environment and settings.py file:
+    - Step 5: Prepare our environment and settings.py file:
 
-   		- In settings.py
+      - In settings.py
 
-                        Reference env.py
+                Reference env.py
 
-			Remove the insecure secret key and replace  SECRET_KEY = os.environ.get('SECRET_KEY')
+		Remove the insecure secret key and replace  SECRET_KEY = os.environ.get('SECRET_KEY')
 
-			Comment out the old DataBases Section and add new DATABASES Section
+		Comment out the old DataBases Section and add new DATABASES Section
 
-		- In the Terminal
+	  - In the Terminal
 
-			Save all files and Make Migrations , python3 manage.py migrate
+		Save all files and Make Migrations , python3 manage.py migrate
 
  	- Step 6: Get our static and media files stored on Cloudinary:
 
-		- In env.py:
+	   - In env.py:
 
-			Add Cloudinary URL to env.py
+		Add Cloudinary URL 
 
-		- In Heroku:
+	   - In Heroku:
 
-			Add Cloudinary URL to Heroku Config Vars*
+		Add Cloudinary URL to Heroku Config Vars*
  
-			Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment)
+		Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment)
 
-			e.g. DISABLE_COLLECTSTATIC =1
+		 e.g. DISABLE_COLLECTSTATIC =1
 
-		- In settings.py:
+	    - In settings.py:
 
-		         Add Cloudinary Libraries to installed apps
+		 Add Cloudinary Libraries to installed apps
 
-		         Tell Django to use Cloudinary to store media and static file Place under the Static files Note
+		  Tell Django to use Cloudinary to store media and static file Place under the Static files Note
 
-		          Link file to the templates directory in Heroku Place under the BASE_DIR line
+		  Link file to the templates directory in Heroku Place under the BASE_DIR line
 
-                          Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array
+                  Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array
 
 	- step7: I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in setting.py followed by
 
-  			 a comma and 'localhost' ( to allow running in the IDE)
+  		             a comma and 'localhost' ( to allow running in the IDE)
 
+       - step8: In the IDE file explorer or terminal
 
-	- step8: In the IDE file explorer or terminal:
+		  create 3 new folders on top level directory media, static, templates
 
-		           Create 3 new folders on top level directory media, static, templates
-
-                           Create a Procfile on the top level directory Procfile
+                  create a Procfile on the top level directory Procfile
 
 	- step9: In Procfile
 
-		            Add code  web: gunicorn restaurant.wsgi
+		 Add code  web: gunicorn restaurant.wsgi
 
 	- step10: In the Terminal:
 
-  		            Add, Commit and Push
+  	         Add, Commit and Push
 
  	- step11: In Heroku:
 
-		       11.1: initial deployment stage disable collectstatic value and 1 key  assign
+		  11.1: initial deployment stage disable collectstatic value and 1 key  assign
 	
- 	               11.2: At final stage only disable collectstatic with its value removed
+ 	          11.2: At final stage only disable collectstatic with its value removed
 
-		       11.3: At last Debug=False    in setting.py file
+		  11.3: At last Debug=False    in setting.py file
 
-		       11.4: After that go Heroku dashboard page  then click deploymnet tab
+		  11.4: After that go Heroku dashboard page  then click deploymnet tab
 
-		       11.5: just click Github then connect and confirm connect Github
+		  11.5: just click Github then connect and confirm connect Github
 
-		       11.6: scroll down the page click deploy branch and the app being built
+		  11.6: scroll down the page click deploy branch and the app being built
 
-		       11.7: Finally, we see deployement the app successful message and
+		  11.7: Finally, we see deployement the app successful message and
 
 			  click the view button to take a look
 
@@ -530,17 +529,18 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
         [w3schools](https://www.w3schools.com/django/showdjango.php?filename=demo_master_index)
 
       - I have got more detaial explanation, for syntax, code expressions, code functionalities.
+
          [Django documentation](https://docs.djangoproject.com/en/4.2/topics/forms/)
 
-	 [Django-phone-numbe](https://django-phonenumber-field.readthedocs.io/en/latest/)
+	 [Django-phone-number](https://django-phonenumber-field.readthedocs.io/en/latest/)
 
-	 [Django-validatorrrs](https://docs.djangoproject.com/en/4.2/ref/validators/)
+	 [Django-validators](https://docs.djangoproject.com/en/4.2/ref/validators/)
      
       -  Hero image come from this  [site](https://familydestinationsguide.com/wp-content/uploads/2022/08/Heroes-Restaurant-and-Brewery.jpg)
       
       -  MDN web docs
    
-   - content
+- content
 	   
     - Content comes from the Bootstrap template, I made slight changes to the prewritten content there. Food descriptions in Menu page come fully from the Burger seller web page .
 
