@@ -1,6 +1,6 @@
 ##   overview 
  
-Table Reservation system is a web-based application system written in django, SQLLite3, and python.
+Restaurant Booking system is a web-based application system written in django, SQLLite3, and python.
 
 The system allows the user to create account before booking and then  book a table , view and cancel it.
 
@@ -10,6 +10,7 @@ administrative panel for restaurant owner's to manage bookings.
 
 This website has been designed to be fully responsive on desktop, laptop, tablet and mobile devices.
 
+![Mock up](https://ui.dev/amiresponsive?url=https://restaurantbooking2023-4f0b057bd1a0.herokuapp.com/)
 
 ##   Features 
   
@@ -21,7 +22,7 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
           
      - Manage Booking    
           
-	  - For  the booking, The admin can add, update, and delete booking information.
+	 - For  the booking, The admin can add, update, and delete booking information.
             
 	 - Manage Table
          
