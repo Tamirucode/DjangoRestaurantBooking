@@ -240,6 +240,10 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
  - PEP8			
 	  - No errors were returned from PEP8online.com
+  
+## Lighthous Testing
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/1bf4caac-1ac1-4d14-a7a5-e3c3bb6dc295)
 
 ## Further Testing
   
@@ -272,7 +276,14 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
    
 
 ## Bugs
+ 
   -  Remaining bugs
+
+    -  I am attempting to create a booking website where booking has been made for the currently logged in user name otherwise not
+     
+       When I tested, I found that logged in user can do booking by changing name but he/she couldnot not seen it their respective mybooking page 
+
+       only I see it in admin site
       
      - I am running my code through HTML checker validation and it is coming back with a few errors which i don't know
      
@@ -438,4 +449,101 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 			  click the view button to take a look
 
 - The live link can be found here:- [Booking](https://restaurantbooking2023-4f0b057bd1a0.herokuapp.com/)
+
+## Technology Used
+   
+   - python
+   
+   - HTML
+   
+   - CSS
+   
+   - Javascript
+
+## Frameworks, Library and Program
+
+1. python module
+
+   - from django.shortcuts import render, redirect, get_object_or_404
+
+   - from .models import Booking
+
+   - from django import forms
+
+   - from django.forms import  widgets
+
+   - from django.core.exceptions import ValidationError
+
+   - from django.core.validators import MinValueValidator
+
+   - from django.utils import timezone
+
+   - from phonenumber_field.modelfields import PhoneNumberField
+ 
+   - from django.db import models
+
+   - from django.contrib import admin
+
+   - from .forms import BookingForm
+
+   - from django.contrib import messages
+  
+   - from django.test import TestCase
+  
+3. jQuery
+
+   - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript. 
+
+   - It is also used for current date for in footer and find table.
+
+5. Bootstrap 4
+
+6. SQLite3 database:
+
+   - SQLite3 is Django's default database system.
+
+8. Font Awesome:
+
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+
+10. Cloudinary:
+   
+   - I used cloudinary for cloud-based storage and partly for linking of my website images.
+
+11. Git
+   
+   - used Git terminal to commit to Git and push to Git hub
+
+11. GitHub
+
+12. Heroku
+   
+   - store the project code after being pushed from Git
+
+## Credits
+   
+   - Code
+
+      - walk through project Hello Django and I think I can blog 
+      
+      - From online source I got some further information how to link url vs views
+        [w3schools](https://www.w3schools.com/django/showdjango.php?filename=demo_master_index)
+
+      - I have got more detaial explanation, for syntax, code expressions, code functionalities.
+         [Django documentation](https://docs.djangoproject.com/en/4.2/topics/forms/)
+
+	 [Django-phone-numbe](https://django-phonenumber-field.readthedocs.io/en/latest/)
+
+	 [Django-validatorrrs](https://docs.djangoproject.com/en/4.2/ref/validators/)
+     
+      -  Hero image come from this  [site](https://familydestinationsguide.com/wp-content/uploads/2022/08/Heroes-Restaurant-and-Brewery.jpg)
+      
+      -  MDN web docs
+   
+   - content
+	   
+    - Content comes from the Bootstrap template, I made slight changes to the prewritten content there. Food descriptions in Menu page come fully from the Burger seller web page .
+
+
+
 
