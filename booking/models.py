@@ -5,14 +5,13 @@ from django.utils import timezone
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-
 class Booking(models.Model):
     """
     Class to represent booking model
     in database and for booking form.
     
     """
-    
+   
     name = models.CharField(max_length=20, null=False)
     
     Number_of_persons = models.PositiveIntegerField(
@@ -34,7 +33,6 @@ class Booking(models.Model):
                                 validators=[validate_date] 
                                )
         
-    
     class Meta:
         """
         Class container with metadata

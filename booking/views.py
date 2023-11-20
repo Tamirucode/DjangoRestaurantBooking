@@ -40,7 +40,7 @@ def get_booking_list(request):
     it has been made and added to the database.
     """
     context = {}
-    user = request.user
+    user= request.user
     bookings = Booking.objects.filter(name=user)
     if bookings:
         return render(request, 'booking/booking_list.html', locals())
@@ -94,7 +94,7 @@ def edit_booking(request, booking_id):
 
 def delete_booking(request, booking_id):
     """
-    Function enables user to edit a booking after
+    Function enables user to delete a booking after
     it has been made and added to the database.
     """
     booking = get_object_or_404(Booking, id=booking_id)
