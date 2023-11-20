@@ -314,6 +314,19 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/73007a89-b413-42fc-abd4-e2d3380b4b5a)
 
+
+- check validation work as expected or not if  the same user name and phone number
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/bc4f4c26-bbfd-45a7-bc04-b960bbb76fb4)
+
+- check if user helen can book previous date and time or not
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/434e3d12-e3ad-4cd1-bd81-6472933c2f02)
+
+- check if user helen can book number_of _person field equalt to zero  or not
+
+![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/92502647-ab74-44f4-b948-8b3e4622e080)
+
 - check Contact section can respond messages to user or not
 
 ![image](https://github.com/Tamirucode/DjangoRestaurantBooking/assets/116649197/b2a94338-7aa8-421c-a763-8560891b4d08)
@@ -323,53 +336,106 @@ This website has been designed to be fully responsive on desktop, laptop, tablet
 
 - The site was deployed to GitHub pages and Heroku terminal.
    
-   - steps for deployment   
+   	- steps for deployment
+
+    - Step 1: Installing Django and supporting libraries
+    
+    - Step 2: Create a new external database
+
+	- Postgres database  was created in Elephant SQL using  my project name:- django_booking
+
+    - Step 3: Create the Heroku app
+
+         - A Heroku app was created in Heroku.  Mine is called restaurantbooking2023
+     
+    - Step 4: Attach the Database:
+
+	 - In env.py
 	
- 	1. Postgres database  was created in Elephant SQL using  my project name:- django_booking
+ 		Import os library
+
+		Set environment variables
+
+	        Add in secret key
+   	
+    	- In heroku.com
+
+		Add Secret Key to Config Vars :- SECRET_KEY, “randomSecretKey”
+
+       - Step 5: Prepare our environment and settings.py file:
+
+   		- In settings.py
+
+                        Reference env.py
+
+			Remove the insecure secret key and replace  SECRET_KEY = os.environ.get('SECRET_KEY')
+
+			Comment out the old DataBases Section and add new DATABASES Section
+
+		- In the Terminal
+
+			Save all files and Make Migrations , python3 manage.py migrate
+
+ 	- Step 6: Get our static and media files stored on Cloudinary:
+
+		- In env.py:
+
+			Add Cloudinary URL to env.py
+
+		- In Heroku:
+
+			Add Cloudinary URL to Heroku Config Vars*
+ 
+			Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment)
+
+			e.g. DISABLE_COLLECTSTATIC =1
+
+		- In settings.py:
+
+		         Add Cloudinary Libraries to installed apps
+
+		         Tell Django to use Cloudinary to store media and static file Place under the Static files Note
+
+		          Link file to the templates directory in Heroku Place under the BASE_DIR line
+
+                          Change the templates directory to TEMPLATES_DIR Place within the TEMPLATES array
+
+	- step7: I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in setting.py followed by
+
+  			 a comma and 'localhost' ( to allow running in the IDE)
+
+
+	- step8: In the IDE file explorer or terminal:
+
+		           Create 3 new folders on top level directory media, static, templates
+
+                           Create a Procfile on the top level directory Procfile
+
+	- step9: In Procfile
+
+		            Add code  web: gunicorn restaurant.wsgi
+
+	- step10: In the Terminal:
+
+  		            Add, Commit and Push
+
+ 	- step11: In Heroku:
+
+		       11.1: initial deployment stage disable collectstatic value and 1 key  assign
 	
- 	2. A Heroku app was created in Heroku.  Mine is called restaurantbooking2023
-	
-	3. In the Heroku settings tab I clicked on "Reveal Config Vars" and copied, and pasted Postgres link from beside the DATABASE_URL variable
+ 	               11.2: At final stage only disable collectstatic with its value removed
 
-	4. In Gitpod dev environment, I have noticed for the env.py file that was automatically generated from the CI template at the beginning. It stores environment variables.
+		       11.3: At last Debug=False    in setting.py file
 
-	5. In the terminal, install dj_database_url and psycopg2
+		       11.4: After that go Heroku dashboard page  then click deploymnet tab
 
- 	6. In my IDE workspace, install gunicorn
+		       11.5: just click Github then connect and confirm connect Github
 
-	7. In the settings.py file, import dJ_database_url underneath import for os
+		       11.6: scroll down the page click deploy branch and the app being built
 
-	8. I  removed the value for SECRET_KEY  in setting .py file and replace with the following code to use an environment variable instead
-		
-  		SECRET_KEY = os.getenv('SECRET_KEY')
-	
- 	9. I added a secret key in the env.py file and  into the Heroku Settings vars as well.
-	
- 	10. I also added DISABLE_COLLECTSTATIC = 1  into the Heroku Settings vars
-	
- 	11. I added cloudinary url in the env.py file and into the Heroku Settings vars as well
+		       11.7: Finally, we see deployement the app successful message and
 
-	12. I created a Procfile 
+			  click the view button to take a look
 
- 	13. In my env.py file, added a new environment variable  with the key set to Database_url, and the value to my elphantSQL database_url
-
-	14. I added the Heroku name followed by herokuapp.com to the ALLOWED_HOSTS variable name in setting.py followed by a comma and 'localhost' ( to allow running in the IDE)
-
-	15. initial deployment stage disable collectstatic value and 1 key  assign
-	
- 	16. At final stage only disable collectstatic with its value removed
-
-	17. At last Debug=False
-
-	18. After  that go Heroku dashboard page  then click deploymnet tab
-
-	19. just click Github then connect and confirm connect Github
-
-	20. scroll down the page click deploy branch and the app being built
-
-	21. Finally, we see deployement the app successful message and
-
-	22. click the view button to take a look
-
-- The live link can be found here:- [nesidjango](https://nesidjango2023-c15b4637e066.herokuapp.com/)
+- The live link can be found here:- [Booking](https://restaurantbooking2023-4f0b057bd1a0.herokuapp.com/)
 
